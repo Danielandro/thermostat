@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Thermostat</title>
+  <link rel="stylesheet" type="text/css" href="thermostat.css">
 </head>
 <body>
-  <main id="thermostat">      
-      <div id="display-temp">Current Temperature: <span id="current-temp">20</span>&#8451;</div>
+  <section>
+    <h1>
+      Current Temperature: <span id="current-temperature"></span>
+    </h1>
+  </section>
+  <main id="thermostat">
+      <div id="display-temp">Current Thermostat Temperature: <span id="current-thermostat-temp"></span>&#8451;</div>
       <div class="temp-controls">
         <p>Temperature Controls</p>
-        <button id="temp-down">+</button>        
-        <button id="temp-up">-</button>
+        <button id="temp-down">-</button>
+        <button id="temp-up">+</button>
         <button id="reset-temp">Reset</button>
       </div>
       <div class="power-saving-mode">
@@ -21,7 +27,11 @@
         <button id="psm-off">Off</button>
       </div>
   </main>
-  
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="./interface.js"></script>
 <script src="./Thermostat.js"></script>
 </body>
 </html>

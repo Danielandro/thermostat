@@ -76,4 +76,25 @@ describe('Thermostat', function() {
       });
     });
   });
-});
+
+  describe('energy-usage', function() {
+     it('thermostat reports low energy usage', function () {
+       for (var i=0; i < 5; i++) {
+         thermostat.down();
+       };
+       expect(thermostat.energyUsage()).toEqual('low_usage');
+     });
+
+     it('thermostat reports medium energy usage', function() {
+       expect(thermostat.energyUsage()).toEqual('medium_usage');
+     });
+
+     it('thermostat reports high energy usage', function() {
+       thermostat.switchPowerSavingModeOff();
+       for (var i=0; i < 8; i++) {
+         thermostat.up();
+       };
+       expect(thermostat.energyUsage()).toEqual('high_usage');
+     });
+   });
+  });
