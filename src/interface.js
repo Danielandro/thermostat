@@ -1,8 +1,9 @@
 $(document).ready(function() {
-  $.get(<API KEY>, function(data) {
+  $.get('API KEY', function(data) {
     $("#current-temperature").text(data.main.temp);
   })
   var thermostat = new Thermostat();
+
   $('#current-thermostat-temp').text(thermostat.temperature);
   $('#temp-up').on('click', function(){
     thermostat.up();
