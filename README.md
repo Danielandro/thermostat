@@ -111,3 +111,13 @@ Object | Message
 thermostat | reset
  -  | temperature
 
+## SETUP
+
+In order to use the weather functionality, you'll need to register at [Open Weather](https://home.openweathermap.org/) to obtain a personal API key. 
+
+Add your api key on **line 3** of **interface.js**, replacing YOUR_API_KEY:
+
+`http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=YOUR_API_KEY&units=metric`
+
+This will get the weather for London. Feel free to change the location.
+
